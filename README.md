@@ -67,6 +67,7 @@ int MainApp_Test(void)
 ```
 
 With the minimal test code ready, flash the program and debug it through the Eclipse IDE. The test summary may resemble something like this:
+![](tiva_tdd_run.gif)
 
 Next development steps are: (i) write some feature code/functions, (ii) call them inside the test function of the desired module, (iii) compile, flash and debug the program and (iv) repeat the process until the test passes.
 
