@@ -32,7 +32,7 @@ ii) **openocd-0.8.0**
 iii) **SW-TM4C Tivaware for C Series Software (version 2.1.4.178)**
 
 To write a test within the desired module, create a function in the "test_<MODULE>.c" file that starts with "test_" to be recognizable by the test processor, such as:
-´´´
+```
 // 2.3. Check if one is equal to two
 void test_SysInitModule_BareMetalBlock_Hardware_TestIf_OneIsEqual_ToTwo(void)
 {
@@ -40,7 +40,7 @@ void test_SysInitModule_BareMetalBlock_Hardware_TestIf_OneIsEqual_ToTwo(void)
 	uint32_t ui32_ActualValue = 1;
 	TEST_ASSERT_EQUAL_UINT32(ui32_ExpectedValue, ui32_ActualValue);
 }
-´´´
+```
 
 If not already written, create the module runner ("test_<MODULE>_runner()") for the module and add all desired tests (RUN_TEST("test_<MODULE>_runner")) in the runner function inside the "test_<MODULE>_runner.c" file:
 ```
@@ -56,7 +56,7 @@ int test_SysInitModule_BareMetalBlock_Hardware_runner(void)
 ```
   
 After that, add the module runner's function call inside the 'MainApp_Test()' function:
-´´´
+```
 // Main application test runner
 int MainApp_Test(void)
 {
@@ -64,7 +64,7 @@ int MainApp_Test(void)
 	test_SysInitModule_BareMetalBlock_Hardware_runner();    // Add all module runners here
 	return(0);
 }
-´´´
+```
 
 With the minimal test code ready, flash the program and debug it through the Eclipse IDE. The test summary may resemble something like this:
 
