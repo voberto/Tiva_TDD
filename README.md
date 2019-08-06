@@ -1,5 +1,5 @@
 # Tiva_TDD
-Test Driven Development minimal project with TI Tiva Launchpad with target-testing features.
+Test Driven Development minimal project with target-testing features for TI Tiva Launchpad.
 
 ### 1 - Overview
 
