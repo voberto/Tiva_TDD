@@ -13,23 +13,23 @@ For this approach, the standard input/output paths are retargeted through a spec
 
 With this alternative I/O system, plus a library called 'unity' (http://www.throwtheswitch.org/unity) and some support code ('/diag' and '/support' folders), a framework to design and test embedded projects with C language is possible (or any other type of output desired). As expected, the included libraries provide a structured way to write and build features with the TDD mindset comprising the steps:
 
-i) Write a test for a desired feature,
+- Write a test for a desired feature,
 
-ii) Run the test (failure is expected, since the feature is not written yet),
+- Run the test (failure is expected, since the feature is not written yet),
 
-iii) Develop the desired feature,
+- Develop the desired feature,
 
-iv) Run the test again. If passes, restart the cycle with next feature. If fails, refactor the current feature and test it again.
+- Run the test again. If passes, restart the cycle with next feature. If fails, refactor the current feature and test it again.
 
 ### 3 - How to use it
 
 All the necessary configurations are provided within the Eclipse project files included with the source code. The following tools were used with the project:
 
-i) **Eclipse IDE**
+- **Eclipse IDE**
 
-ii) **openocd-0.8.0**
+- **openocd-0.8.0**
 
-iii) **SW-TM4C Tivaware for C Series Software (version 2.1.4.178)**
+- **SW-TM4C Tivaware for C Series Software (version 2.1.4.178)**
 
 To write a test within the desired module, create a function in the "test_<MODULE>.c" file that starts with "test_" to be recognizable by the test processor, such as:
 ```
